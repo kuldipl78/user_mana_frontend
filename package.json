@@ -1,5 +1,5 @@
 {
-  "name": "task-managent",
+  "name": "task-management",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,9 +14,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.10",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.21"
   }
 }
