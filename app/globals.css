@@ -1,10 +1,50 @@
 @import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+.main-heading{
+  align-items: center;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+}
+.main-container{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.list-items-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  gap: 1rem;
+}
+.box-container{
+width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.list-items{
+  border-radius: 10px;
+  border: 2px, solid, white;
+}
+input, textarea, select{
+  border-radius: 10px;
+  border: 2px, solid, white;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -23,4 +63,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.edit-btn{
+  border-radius: 2px solid, white;
+  padding: 5px;
+  border-radius: 5px;
 }
