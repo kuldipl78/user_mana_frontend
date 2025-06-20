@@ -14,7 +14,7 @@ export default function EditTaskForm({ taskId, onCancel }) {
     e.preventDefault();
     await updateTask(taskId, task);
     router.refresh();
-    onCancel(); // close the form
+    onCancel();
   };
 
   if (!task) return <p>Loading...</p>;

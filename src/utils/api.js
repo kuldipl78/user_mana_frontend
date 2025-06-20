@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://task-manager-api-a2n0.onrender.com';
 
 const handleResponse = async (res) => {
   if (!res.ok) {
@@ -9,7 +9,6 @@ const handleResponse = async (res) => {
     throw new Error(`API Error: ${res.status} ${res.statusText}\n${errorText}`);
   }
 
-  // Avoid parsing JSON if status is 204 (No Content)
   if (res.status === 204) return null;
 
   return res.json();
@@ -44,6 +43,8 @@ export const updateTask = async (id, task) => {
 };
 
 export const deleteTask = async (id) => {
-  const res = await fetch(`${API_BASE}/tasks/${id}`, { method: 'DELETE' });
+  const res = await fetch(`${API_BASE}/tasks/${id}`, {
+    method: 'DELETE'
+  });
   return handleResponse(res);
 };
